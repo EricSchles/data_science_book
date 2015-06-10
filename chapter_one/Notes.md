@@ -217,11 +217,9 @@ print result
 ```
 to_process = "There is some meaningful data here: 123985 and here: 1290841 but also here: 102394"
 new_listing = []
-for elem in to_process.split("here:")[1:]:
-    tmp = elem.split()
-    for i in tmp:
-        if i.isdigit():
-            new_listing.append(i)
+for elem in to_process.split():
+    if elem.isdigit():
+        new_listing.append(i)
 print ",".join(new_listing)
 ```
 ###Replacing things
@@ -241,6 +239,9 @@ Now that we know how to process strings (at least), let's move onto feature extr
 Since feature extraction is extremely well covered we'll only mention one example and then reference [the tutorial on sklearns website](http://scikit-learn.org/stable/modules/feature_extraction.html), which is fantastic.
 
 ```
+from sklearn.metrics.pairwise import linear_kernel
+from sklearn.feature_extraction.text import TfidfVectorizer
+
 def doc_comparison(new_document,doc_list):
     total = 0.0
     for doc in doc_list:
