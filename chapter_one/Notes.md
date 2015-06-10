@@ -261,4 +261,12 @@ print doc_comparison("Hello there my Name is Eric","Hi, my name is Eric Schles a
 
 In the above example we make use of [Tf-idf](http://www.tfidf.com/) vectorization to transform the words in the documents into mathematical objects. 
 
- 
+##Modeling
+
+There are number of ways you can do linear regression in python.  The simplest is probably [statsmodels](http://stackoverflow.com/questions/19991445/run-an-ols-regression-with-pandas-data-frame) which leads you work directly with dataframes.  That being said, there are good reasons to use the [sklearn linear regression package](http://scikit-learn.org/stable/modules/generated/sklearn.linear_model.LinearRegression.html) - not least of all being the number of linear regression models available to a user. 
+
+Something important to note: At the present time sklearn does not provide summary statistics.
+
+
+
+
