@@ -257,7 +257,7 @@ def cosine_similarity(documentA,documentB):
     cosine_similarities = linear_kernel(tfidf[0:1], tfidf).flatten() 
     return cosine_similarities
 
-print doc_comparison("Hello there my Name is Eric","Hi, my name is Eric Schles and I like data science")
+print doc_comparison("Hello there my Name is Eric",["Hi, my name is Eric Schles and I like data science"])
 ```
 
 In the above example we make use of [Tf-idf](http://www.tfidf.com/) vectorization to transform the words in the documents into mathematical objects. 
