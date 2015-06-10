@@ -223,7 +223,7 @@ for elem in to_process.split("here:")[1:]:
         if i.isdigit():
             new_listing.append(i)
 print ",".join(new_listing)
-
+```
 ###Replacing things
 
 The replace method is another extremely powerful method.  We'll touch on one brief example here.  
@@ -271,6 +271,13 @@ Something important to note: At the present time sklearn does not provide summar
 
 ###K-nearest neighbors
 
-There are 
+Nearest neighbors are another method of prediction.  However the most common use of this technique is for classification.  Sklearn gives a [great introduction](http://scikit-learn.org/stable/modules/neighbors.html) to the concept and techniques for making use of it.
 
+###Support Vector Machines
+
+Similar to K-Nearest Neighbors, support vector machines is well documented by [sklearn](http://scikit-learn.org/stable/modules/svm.html).
+
+###Neural Networks
+
+Here we'll look at [pybrain](http://pybrain.org/docs/tutorial/intro.html) - an amazing package for making use of neural networks
 

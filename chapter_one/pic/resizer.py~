@@ -1,0 +1,17 @@
+import os
+import glob
+from PIL import Image
+
+def resize(img):
+    im = Image.open(img)
+    w,h = im.size
+    newIm = im.resize((150,150))
+    first = img.split(".")[0]
+    newIm.save(first+"copy.jpeg")
+
+images = glob.glob("*.jpeg")
+for image in images:
+    resize(image)
+images = glob.glob("*.jpg")
+for image in images:
+    resize(image)
