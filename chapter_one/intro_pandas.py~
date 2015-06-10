@@ -1,0 +1,13 @@
+import pandas as pd
+import random as rand
+
+
+#Initialize your dataframe
+df = pd.DataFrame()
+
+for i in xrange(100):
+    data = {
+        "row_one":[rand.randint() for elem in xrange(20)],
+        "row two":[rand.randint() for elem in xrange(20)]
+    }
+    df = df.append(data,ignore_index=True)
