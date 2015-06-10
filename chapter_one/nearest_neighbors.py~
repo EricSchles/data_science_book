@@ -1,0 +1,26 @@
+import numpy as np
+from sklearn import neighbors
+import pandas pd
+
+#Initialize your dataframe
+df = pd.DataFrame()
+
+#add data to the dataframe
+for i in xrange(10):
+    data = {
+        "A":np.random.poisson(5,10000000)[0],
+        "B":np.random.chisquare(5,100000)[0],
+        "C":np.random.negative_binomial(1000,0.02)
+        
+    }
+    df = df.append(data,ignore_index=True)
+
+clf = neighbors.KNeighborsClassifier()
+clf.fit(X, y)
+Z = clf.predict(X)
+accuracy=clf.score(X,y)
+print ("Predicted model accuracy: "+ str(accuracy))
+# Type of Z is numpy ndarray. Add, Z, to iris data frame as last column
+df['Z']=Z
+# Compare two classes: actual and predicted
+df.iloc[:,4:6]
